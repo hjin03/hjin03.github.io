@@ -22,11 +22,8 @@ int main(int argac, char** argv)
 <aside>
 💡 error가 발생한다 !!!
 
-![image](https://user-images.githubusercontent.com/105411918/193461100-1789cdbb-50b5-47ac-8d98-07db298ce55d.png)
-
-
-
 </aside>
+![image](https://user-images.githubusercontent.com/105411918/193461212-f7ed8838-a8cb-4a39-81d1-7aace1e88209.png)
 
 오늘, C++ 공부를 하다가 의문이 들어 다시 펼쳐보았다.
 
