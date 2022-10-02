@@ -22,7 +22,9 @@ int main(int argac, char** argv)
 <aside>
 💡 error가 발생한다 !!!
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c537966c-086a-4298-8ca8-14827088223d/Untitled.png)
+![image](https://user-images.githubusercontent.com/105411918/193461100-1789cdbb-50b5-47ac-8d98-07db298ce55d.png)
+
+
 
 </aside>
 
