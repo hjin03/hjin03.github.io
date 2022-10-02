@@ -29,7 +29,7 @@ int main(int argac, char** argv)
 
 아래의 포인터변수의 참조자 예시를 봅자.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e0e387d7-6419-48a3-9fe9-9252f3b68130/Untitled.png)
+![image](https://user-images.githubusercontent.com/105411918/193461298-b1dfa7da-ce05-46ca-bfc4-248d52aae39b.png)
 
 여기서 
 
@@ -68,7 +68,7 @@ int *& ry = &y;
 
 ry는 포인터 변수의 참조자 선언이라고 볼 수가 있는것이다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c524fcb3-73ff-4077-b696-202b199348d4/Untitled.png)
+![image](https://user-images.githubusercontent.com/105411918/193461307-2df23487-3b95-43f9-a180-7fd04a98cc91.png)
 
 이렇게 했을 때 오류가 나니까 다시 한 번 확인할 수 있는 것.
 
@@ -83,7 +83,7 @@ But !!
 
 error코드를 살펴보자.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c537966c-086a-4298-8ca8-14827088223d/Untitled.png)
+![image](https://user-images.githubusercontent.com/105411918/193461328-803d6eaf-73ed-4a2d-a840-2b757e83f40b.png)
 
 일단 reference to type ‘int*’이라는 말을 보면 포인터변수에 대한 참조자라는 것은 확실하다.
 
@@ -106,13 +106,13 @@ error코드를 살펴보자.
 ---
 (출처는 첫 번째 사이트 !)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/516f141e-420d-4bfa-b7e1-db89931d18e5/Untitled.png)
+![image](https://user-images.githubusercontent.com/105411918/193461342-83aa3ce8-f080-47f4-9fc6-c673ceee33ec.png)
 
 Lvalue는 표현식 이후에 없어지지 않고 지속되는 객체로, 말하자면 선언식 중 왼쪽에 있는거, 예를 들면 선언된 변수 ! 를 이야기하는 것으로 추정됨 !
 
 Rvalue는 표현식 종료 후 더 이상 존재하지 않는 임시적인 값으로, 말하자면 선언식 중 오른쪽에 있는 것, 예를 들면 변수선언에 이용되는 값 일부 ?!? 로 생각.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d5cd7eac-816a-4f20-8621-bc9493e1e335/Untitled.png)
+![image](https://user-images.githubusercontent.com/105411918/193461365-03d1daf0-4a74-4cfd-b9ca-06c49d39de33.png)
 
 그런데 Lvalue와 Rvalue의 참조자 선언은 다르게 생겼다는 점 !
 
@@ -120,7 +120,7 @@ Rvalue는 표현식 종료 후 더 이상 존재하지 않는 임시적인 값�
 
 우리 과제를 다시 한 번 보자.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5934120c-35c9-415f-b6d9-1fad7a9b347b/Untitled.png)
+![image](https://user-images.githubusercontent.com/105411918/193461374-c9f82719-d952-4327-879e-f86a057b2b1d.png)
 
 이제 이상한 부분이 보이지 않는가 ?  !
 
@@ -147,13 +147,13 @@ int main(int argac, char** argv)
 }
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/98303225-e472-4a8e-ab6b-4b3eb1f10b65/Untitled.png)
+![image](https://user-images.githubusercontent.com/105411918/193461396-dc3432b1-76fa-4fe4-b520-ecdc8ae4c825.png)
 
  
 
 헉 ! 오류가 나타나지 않고 실행이 잘 된다 !
 
-1. 이번에는 Lvalue로 만들어볼게용
+2. 이번에는 Lvalue로 만들어볼게용
 
 ```cpp
 #include <iostream>
@@ -169,7 +169,7 @@ int main(int argac, char** argv)
 }
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/68c9e65d-7e8c-4fc6-8878-27683d7691dd/Untitled.png)
+![image](https://user-images.githubusercontent.com/105411918/193461413-180c5178-c07f-49fb-b2ef-e67d0857854a.png)
 
  !!!!!!!
 
@@ -181,12 +181,12 @@ int main(int argac, char** argv)
 
 즉, 위에서의 오류가 나는 원인은
 
-1. Rvalue와 Lvalue의 개념 때문이다
-2. *&ry는 포인터변수의 참조자로, Rvalue를 참조해야하는데
-3. &y는 Rvalue입니다.
-4. 따라서 우리는 Rvalue의 참조자인 *&&ry로 고쳐주거나
-5. &y를 Lvalue로 만들어 포인터 변수를 만들어 참조를 하게되면
-6. 우리는 문제를 해결할 수 있겠네요
+#### 1. Rvalue와 Lvalue의 개념 때문이다
+#### 2. *&ry는 포인터변수의 참조자로, Rvalue를 참조해야하는데
+#### 3. &y는 Rvalue입니다.
+#### 4. 따라서 우리는 Rvalue의 참조자인 *&&ry로 고쳐주거나
+#### 5. &y를 Lvalue로 만들어 포인터 변수를 만들어 참조를 하게되면
+#### 6. 우리는 문제를 해결할 수 있겠네요
 
 <aside>
 💡 참조자 선언은 상수가 아닌 변수를 대상으로만 가능하다
